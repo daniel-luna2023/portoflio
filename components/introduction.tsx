@@ -1,7 +1,7 @@
-import { Mail, Paperclip } from "lucide-react"
-import { buttonVariants } from "./ui/button"
-import Link from "next/link"
-import Container from "./shared/container"
+import { Mail, Paperclip } from "lucide-react";
+import { buttonVariants } from "./ui/button";
+import Link from "next/link";
+import Container from "./shared/container";
 
 const Introduction = () => {
   return (
@@ -12,18 +12,24 @@ const Introduction = () => {
         <h2 className="text-2xl text-gray-400">Jr Developer</h2>
         <div className="flex items-center">
           <div className="flex flex-col md:flex-row gap-4 justify-between mt-10 mx-auto">
-            <Link className={buttonVariants()} href='#contact'>
-               <Mail className="mr-2"> </Mail>Contacta conmigo
+            <Link className={buttonVariants()} href="#contact">
+              <Mail className="mr-2"> </Mail>Contacta conmigo
             </Link>
-            <Link className={buttonVariants({variant: 'secondary'})} href='/cv-oscar.pdf' target="_blank">
-               <Paperclip className="mr-2"> </Paperclip>Descargar CV
+            <Link
+              className={buttonVariants({ variant: "secondary" })}
+              href="/cv-oscar.pdf"
+              target="_blank"
+            >
+              <Paperclip className="mr-2"> </Paperclip>Descargar CV
             </Link>
           </div>
         </div>
-        <img src="/profile.jpg" alt="Profile Pic" width={500} height={500}/> 
+        <div className="mt-10">
+          <img src="/profile.jpg" alt="Profile Pic" width={400} height={400} />
+        </div>
       </div>
     </Container>
-  )
-}
+  );
+};
 
-export default Introduction
+export default Introduction;
